@@ -1,0 +1,35 @@
+<div class="container-login">
+  <h1>新規LIVE</h1>
+
+  <%= form_with(model: @live, local: true) do |f| %>
+    <div class="form-group">
+      <%= f.label :date, '日程' %>
+      <%= f.date_field :date, autofocus: true, autocomplete: 'email', class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :place, '場所' %>
+      <%= f.text_field :place, autocomplete: 'current-password', class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :name, 'イベント名' %>
+      <%= f.text_field :name, autocomplete: 'current-password', class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description, '詳細' %>
+      <%= f.text_field :description, autocomplete: 'current-password', class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :picture, '場所' %>
+      <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit  '投稿する', class: 'btn btn-primary' %>
+    </div>
+
+  <% end %>
+</div>
