@@ -44,7 +44,7 @@ gem 'rails-i18n', '~> 5.1'
 gem 'devise-i18n'
 
 # Bootstrap
-gem 'bootstrap', '~> 4.4.1'
+gem 'bootstrap-sass', '3.3.7'
 gem 'jquery-rails'
 gem 'devise-bootstrap-views', '~> 1.0'
 
