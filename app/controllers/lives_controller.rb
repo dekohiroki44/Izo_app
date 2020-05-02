@@ -4,7 +4,7 @@ class LivesController < ApplicationController
   end
 
   def show
-    @live = live.find(params[:id])
+    @live = Live.find(params[:id])
   end
 
   def new
@@ -14,6 +14,7 @@ class LivesController < ApplicationController
   def create
     live = Live.new(live_params)
     if live.save
+      flash[:success] = "liveを更新しました"
       redirect_to lives_url
     else
       render new_live_path
