@@ -3,9 +3,21 @@
     <%= link_to "IzoHp", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to 'Live', lives_path %></li>
         <% if user_signed_in? %>
           <li><%= link_to 'アカウント編集', edit_user_registration_path %></li>
-          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              更新 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Live", new_life_path %></li>
+              <li class="divider"></li>
+              <li>
+                <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+              </li>
+            </ul>
+          </li>
         <% else %>
           <li><%= link_to "新規登録", new_user_registration_path %></li>
           <li><%= link_to "ログイン", new_user_session_path %></li>

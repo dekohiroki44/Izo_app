@@ -1,11 +1,9 @@
-<div class="container-login">
-  <h1>ライブスケジュール</h1>
-
-  <% @lives.each do |live| %>
-    <%= live.date %>
-    <%= live.place %>
-    <%= live.name %>
-    <%= live.description %>
-    <%= live.picture if live.picture %>
-  <% end %>
+<% provide(:title, "LIVE") %>
+<div class="row">
+  <div class="col-md-8">
+    <h3>Live schedule</h3>
+    <ol class="lives">
+      <%= render @lives %>
+    </ol>
+  </div>
 </div>
