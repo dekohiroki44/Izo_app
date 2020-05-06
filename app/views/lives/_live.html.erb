@@ -1,5 +1,5 @@
 <li id="live-<%= live.id %>">
-  <%= link_to live.picture, life_path(live.id) %>
+  <%= image_tag live.picture.url if live.picture? %>
     <span class="date"><%= live.date %></span>
     <span class="place"><%= live.place %></span>
     <span class="title"><%= live.title %></span>
