@@ -158,15 +158,6 @@ aside {
   }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
-}
-
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -216,33 +207,65 @@ input {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
   }
-  .date {
-    margin-top: 5em;
-    padding-top: 0;
-  }
-  .place {
-    display: block;
-    margin-left: 60px;
-    img {
-      display: block;
-      padding: 5px 0;
-    }
-  }
-  .timestamp {
-    color: $gray-light;
-    display: block;
-    margin-left: 60px;
-  }
   .picture {
     float: left;
-    margin-right: 10px;
+    margin-right: 20px;
     margin-top: 5px;
   }
-}
-
-span.picture {
-  margin-top: 10px;
-  input {
-    border: 0;
+  // .live-info {
+  //   margin: auto 0;
+    .date {
+      display: block;
+      margin-top: 1em;
+      padding-top: 0;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .place {
+      display: block;
+      margin-left: 60px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .title {
+      display: block;
+      margin-left: 60px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .time {
+      display: block;
+      margin-left: 60px;
+    }
+    .price {
+      display: block;
+      margin-left: 60px;
+    }
+    .performer {
+      display: block;
+      margin-left: 60px;
+    }
+    
+    .timestamp {
+      color: $gray-light;
+      display: block;
+      margin-left: 60px;
+    }
   }
-}
+  // .picture {
+  //   float: left;
+  //   margin-right: 10px;
+  //   margin-top: 5px;
+// }
+
+
+// .gravatar_edit {
+//   margin-top: 15px;
+// }
+
+// span.picture {
+//   margin-top: 10px;
+//   input {
+//     border: 0;
+//   }
+// }

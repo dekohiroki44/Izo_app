@@ -1,4 +1,5 @@
 class Live < ApplicationRecord
+  default_scope -> { order(date: :asc) }
   mount_uploader :picture, PictureUploader
   validate  :picture_size
 

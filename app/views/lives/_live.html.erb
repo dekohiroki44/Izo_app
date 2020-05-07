@@ -1,9 +1,12 @@
 <li id="live-<%= live.id %>">
-  <%= image_tag live.picture.url if live.picture? %>
+  <%= image_tag live.picture.url, class:"picture" if live.picture?  %>
+  <!-- <div class="live-info"></div> -->
     <span class="date"><%= live.date %></span>
     <span class="place"><%= live.place %></span>
     <span class="title"><%= live.title %></span>
     <span class="time"><%= live.time %></span>
     <span class="price"><%= live.price %></span>
     <span class="performer"><%= live.performer %></span>
+    <span class="edit"><%= link_to 'edit'  %></span>
+  <!-- </div> -->
 </li>
