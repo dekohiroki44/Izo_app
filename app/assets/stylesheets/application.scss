@@ -21,6 +21,11 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+$gray-light: #777;
+$gray: lighten(#000, 33.5%);
+$gray-darker: lighten(#000, 13.5%);
+$state-danger-text: #a94442;
+$gray-lighter: lighten(#000, 93.5%);
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -179,12 +184,12 @@ input {
   }
 }
 
-.field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-  }
-}
+// .field_with_errors {
+//   @extend .has-error;
+//   .form-control {
+//     color: $state-danger-text;
+//   }
+// }
 
 /* Users index */
 
@@ -211,9 +216,10 @@ input {
     float: left;
     margin-right: 20px;
     margin-top: 5px;
+    width: 250px;
+    height: 250px;
   }
-  // .live-info {
-  //   margin: auto 0;
+  .live-info {
     .date {
       display: block;
       margin-top: 1em;
@@ -268,4 +274,4 @@ input {
 //   input {
 //     border: 0;
 //   }
-// }
+}
