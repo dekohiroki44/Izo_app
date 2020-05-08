@@ -25,7 +25,7 @@ gem 'devise'
 gem 'rails-i18n', '~> 5.1'
 gem 'devise-i18n'
 # Bootstrap
-gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 
 group :development, :test do
