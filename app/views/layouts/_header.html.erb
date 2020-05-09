@@ -1,29 +1,30 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "IzoHp", root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Live', lives_path %></li>
-        <% if user_signed_in? %>
-          <li><%= link_to 'アカウント編集', edit_user_registration_path %></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              更新 <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Live", new_life_path %></li>
-              <li class="divider"></li>
-              <li>
-                <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-              </li>
-            </ul>
-          </li>
-        <% else %>
-          <li><%= link_to "新規登録", new_user_registration_path %></li>
-          <li><%= link_to "ログイン", new_user_session_path %></li>
-        <% end %>
-      </ul>
-    </nav>
+<header class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <%= link_to "IzoHp", root_path, id: "logo", class: "navbar-brand" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active"><%= link_to "News", posts_path, class: 'nav-link' %></li>
+      <li class="nav-item active"><%= link_to 'Live', lives_path, class: 'nav-link' %></li>
+      <li class="nav-item active"><%= link_to "About",   posts_path, class: 'nav-link' %></li>
+      <li class="nav-item active"><%= link_to "Contact", posts_path, class: 'nav-link' %></li>
+      <% if user_signed_in? %>
+        <!-- <li class="nav-item active"><%= link_to 'アカウント編集', edit_user_registration_path, class: 'nav-link' %></li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit</a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "News", new_post_path, class: 'dropdown-item' %>
+            <%= link_to "Live", new_life_path, class: 'dropdown-item' %>
+            <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item active"><%= link_to "新規登録", new_user_registration_path, class: 'nav-link' %></li>
+        <li class="nav-item active"><%= link_to "ログイン", new_user_session_path, class: 'nav-link' %></li>
+      <% end %>
+    </ul>
   </div>
 </header>
 

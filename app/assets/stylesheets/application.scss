@@ -35,8 +35,10 @@ $gray-lighter: lighten(#000, 93.5%);
 
 /* universal */
 
-body {
-  padding-top: 60px;
+.container {
+  @extend .container-fluid;
+  max-width:1000px;
+  padding: 2rem;
 }
 
 section {
@@ -61,10 +63,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 4em;
   letter-spacing: -2px;
+  margin-top: 50px;
   margin-bottom: 30px;
   text-align: center;
+  color: whitesmoke;
 }
 
 h2 {
@@ -84,18 +88,11 @@ p {
 
 /* header */
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  &:hover {
-    color: white;
-    text-decoration: none;
+header {
+  height: 100px;
+  #logo {
+    font-size: 30px;
+    margin-left: 40px;
   }
 }
 
@@ -123,6 +120,25 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+/* footer */
+
+.main-wrapper {
+  margin: 30px 0;
+}
+
+/* pages_home */
+
+.jumbotron {
+  height: 400px;
+  background-image: url(strat.jpg);
+  background-size: cover;
+}
+
+.item-img {
+  height: 250px;
+  width: 250px;
 }
 
 /* miscellaneous */
@@ -223,33 +239,37 @@ input {
     .date {
       display: block;
       margin-top: 1em;
-      padding-top: 0;
+      margin-left: 30px;
       font-weight: bold;
       font-size: 20px;
     }
     .place {
       display: block;
-      margin-left: 60px;
+      margin-left: 30px;
       font-weight: bold;
       font-size: 20px;
     }
     .title {
       display: block;
-      margin-left: 60px;
+      margin-left: 30px;
       font-weight: bold;
       font-size: 20px;
     }
     .time {
       display: block;
-      margin-left: 60px;
+      margin-left: 30px;
     }
     .price {
       display: block;
-      margin-left: 60px;
+      margin-left: 30px;
     }
     .performer {
       display: block;
-      margin-left: 60px;
+      margin-left: 30px;
+    }
+    .edit {
+      display: block;
+      margin-left: 30px;
     }
     
     .timestamp {
@@ -258,20 +278,4 @@ input {
       margin-left: 60px;
     }
   }
-  // .picture {
-  //   float: left;
-  //   margin-right: 10px;
-  //   margin-top: 5px;
-// }
-
-
-// .gravatar_edit {
-//   margin-top: 15px;
-// }
-
-// span.picture {
-//   margin-top: 10px;
-//   input {
-//     border: 0;
-//   }
 }
