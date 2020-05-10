@@ -1,15 +1,33 @@
 <%# render 'shared/flash_messages' %>
-<div class="center jumbotron">
-  <h1>Welcome to the IZO HP</h1>
-</div>
-<div class="container">
-  <div class="item-section">
-    <%= image_tag 'journeyman.jpeg', class: "item-img" %>
+<div class="main-wrapper">
+  <div class="center jumbotron">
+    <h1>Welcome to the IZO HP</h1>
   </div>
-  <div class="main-section">
-    <div class="row">
-      <div class="col-md-12">
-        <%= render @live %>
+  <div class="container">
+    <div class="item-section mb-5 d-flex flex-column flex-md-row justify-content-between">
+      <div>
+        <%= image_tag 'journeyman.jpeg', class: "item-picture" %>
+      </div>
+      <div class="item-info">
+        <h4>journeyman</h4>
+        <h4>¥,2,500</h4>
+      </div>
+      <div class="item-youtube">
+        <iframe width="400" height="250" src="https://www.youtube.com/embed/UnRym7Mh7qg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="main-section">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="latest-news">
+            <h3>Latest News</h3>
+            <%= render @post %>
+          </div>
+          <div class="next-live">
+            <h3>Next Live</h3>
+            <%= render @live %>
+          </div>
+        </div>
       </div>
     </div>
   </div>

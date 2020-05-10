@@ -1,5 +1,6 @@
-<div class="container-login">
-  <h1>新規LIVE</h1>
+<% provide(:title, "LIVE - new") %>
+<div class="container">
+  <h2>新規LIVE</h2>
 
   <%= form_with(model: @live, local: true) do |f| %>
     <div class="form-group">
