@@ -1,0 +1,9 @@
+<li id="post-<%= post.id %>" class="post-info d-flex flex-column flex-sm-row">
+  <%= image_tag post.picture.url, class:"picture" if post.picture?  %>
+  <div class="post-column">
+    <span class="date"><%= post.date %></span>
+    <span class="title"><%= post.title %></span>
+    <span class="performer"><%= post.description %></span>
+    <span class="edit"><%= link_to 'edit'  %></span>
+  </div>
+</li>

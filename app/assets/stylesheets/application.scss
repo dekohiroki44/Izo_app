@@ -35,10 +35,15 @@ $gray-lighter: lighten(#000, 93.5%);
 
 /* universal */
 
+body {
+  background-color: #fff;
+}
+
 .container {
   @extend .container-fluid;
   max-width:1000px;
   padding: 2rem;
+  // background-color: #bbb;
 }
 
 section {
@@ -69,10 +74,11 @@ h1 {
   margin-bottom: 30px;
   text-align: center;
   color: whitesmoke;
+  text-shadow:3px 3px 0 black;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 3em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
@@ -124,22 +130,31 @@ footer {
 
 /* footer */
 
-.main-wrapper {
+footer {
   margin: 30px 0;
 }
 
 /* pages_home */
 
+.main-wrapper {
+  h3 {
+    border-width: 10px 0;
+    border-style: groove;
+  }
+}
+
 .jumbotron {
   height: 400px;
   background-image: url(strat.jpg);
   background-size: cover;
+  margin-bottom: 0;
 }
 
-.item-img {
+.item-picture {
   height: 250px;
   width: 250px;
 }
+
 
 /* miscellaneous */
 
@@ -219,11 +234,14 @@ input {
   }
 }
 
-/* lives */
+/* live */
 
 .lives {
   list-style: none;
   padding: 0;
+}
+
+.live-info {
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
@@ -235,47 +253,39 @@ input {
     width: 250px;
     height: 250px;
   }
-  .live-info {
-    .date {
-      display: block;
-      margin-top: 1em;
-      margin-left: 30px;
-      font-weight: bold;
-      font-size: 20px;
-    }
-    .place {
-      display: block;
-      margin-left: 30px;
-      font-weight: bold;
-      font-size: 20px;
-    }
-    .title {
-      display: block;
-      margin-left: 30px;
-      font-weight: bold;
-      font-size: 20px;
-    }
-    .time {
-      display: block;
-      margin-left: 30px;
-    }
-    .price {
-      display: block;
-      margin-left: 30px;
-    }
-    .performer {
-      display: block;
-      margin-left: 30px;
-    }
-    .edit {
-      display: block;
-      margin-left: 30px;
-    }
-    
-    .timestamp {
-      color: $gray-light;
-      display: block;
-      margin-left: 60px;
-    }
+  .date {
+    display: block;
+    margin-top: 1em;
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .place {
+    display: block;
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .title {
+    display: block;
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .time {
+    display: block;
+    margin-left: 30px;
+  }
+  .price {
+    display: block;
+    margin-left: 30px;
+  }
+  .performer {
+    display: block;
+    margin-left: 30px;
+  }
+  .edit {
+    display: block;
+    margin-left: 30px;
   }
 }

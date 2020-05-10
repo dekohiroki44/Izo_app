@@ -1,6 +1,6 @@
-<li id="live-<%= live.id %>" class="d-flex flex-column flex-sm-row">
+<li id="live-<%= live.id %>" class="live-info d-flex flex-column flex-sm-row">
   <%= image_tag live.picture.url, class:"picture" if live.picture?  %>
-  <div class="live-info">
+  <div class="live-column">
     <span class="date"><%= live.date %></span>
     <span class="place"><%= live.place %></span>
     <span class="title"><%= live.title %></span>

@@ -1,2 +1,11 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<% provide(:title, "NEWS") %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>News</h3>
+      <ol class="news d-flex flex-column justify-content-center">
+        <%= render @posts %>
+      </ol>
+    </div>
+  </div>
+</div>

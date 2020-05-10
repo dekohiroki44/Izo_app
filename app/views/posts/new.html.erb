@@ -1,2 +1,40 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<% provide(:title, "NEWS - new") %>
+<div class="container">
+  <h2>新規NEWS</h2>
+
+  <%= form_with(model: @post, local: true) do |f| %>
+    <div class="form-group">
+      <%= f.label :title, 'タイトル' %>
+      <%= f.text_field :title, autofocus: true, autocomplete: 'email', class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description, '詳細' %>
+      <%= f.text_field :description, autocomplete: 'current-password', class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :data, '日付' %>
+      <%= f.date_field :date, autocomplete: 'current-password', class: 'form-control' %>
+    </div>
+
+    <div class="form-group picture">
+      <%= f.label :picture, '画像' %>
+      <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png', class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit  '投稿する', class: 'btn btn-primary' %>
+    </div>
+
+  <% end %>
+</div>
+
+<script type="text/javascript">
+  $('#post_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB. Please choose a smaller file.');
+    }
+  });
+</script>
