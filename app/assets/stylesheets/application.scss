@@ -36,14 +36,14 @@ $gray-lighter: lighten(#000, 93.5%);
 /* universal */
 
 body {
-  background-color: #fff;
+  background-image: url(fire-red.jpg);
+  background-size: cover;
 }
 
 .container {
   @extend .container-fluid;
-  max-width:1000px;
+  max-width:1100px;
   padding: 2rem;
-  // background-color: #bbb;
 }
 
 section {
@@ -65,6 +65,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  color: whitesmoke
 }
 
 h1 {
@@ -73,7 +74,6 @@ h1 {
   margin-top: 50px;
   margin-bottom: 30px;
   text-align: center;
-  color: whitesmoke;
   text-shadow:3px 3px 0 black;
 }
 
@@ -86,16 +86,35 @@ h2 {
   color: $gray-light;
 }
 
+h3 {
+  text-align: center;
+  border-width: 10px 0;
+  border-style: groove;
+  margin: 20px 0;
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
 
+.partial-link {
+  color: #212529;
+  &:hover {
+    text-decoration: none;
+    color: #212529;
+  }
+}
+  
 
 /* header */
 
 header {
-  height: 100px;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
   #logo {
     font-size: 30px;
     margin-left: 40px;
@@ -105,7 +124,6 @@ header {
 /* footer */
 
 footer {
-  margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
@@ -128,12 +146,6 @@ footer {
   }
 }
 
-/* footer */
-
-footer {
-  margin: 30px 0;
-}
-
 /* pages_home */
 
 .main-wrapper {
@@ -145,8 +157,6 @@ footer {
 
 .jumbotron {
   height: 400px;
-  background-image: url(strat.jpg);
-  background-size: cover;
   margin-bottom: 0;
 }
 
@@ -234,18 +244,59 @@ input {
   }
 }
 
+/* post */
+
+.posts {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+
+.post-info {
+  color: white;
+  .picture {
+    float: left;
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 250px;
+    height: 250px;
+  }
+  .title {
+    display: block;
+    // margin-top: 1em;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .description {
+    display: block;
+  }
+  .date {
+    color: $gray-light;
+    text-align: right;
+    display: block;
+  }
+  .edit {
+    display: block;
+    text-align: right;
+  }
+}
+
 /* live */
 
 .lives {
   list-style: none;
   padding: 0;
-}
-
-.live-info {
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
   }
+}
+
+.live-info {
+  color: white;
   .picture {
     float: left;
     margin-right: 20px;

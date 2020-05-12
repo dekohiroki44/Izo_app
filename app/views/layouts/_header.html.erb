@@ -1,5 +1,5 @@
-<header class="navbar navbar-expand-sm navbar-dark bg-dark">
-  <%= link_to "IzoHp", root_path, id: "logo", class: "navbar-brand" %>
+<header class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+  <%= link_to "Izo Official Web Site", root_path, id: "logo", class: "navbar-brand" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -8,7 +8,8 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active"><%= link_to "News", posts_path, class: 'nav-link' %></li>
       <li class="nav-item active"><%= link_to 'Live', lives_path, class: 'nav-link' %></li>
-      <li class="nav-item active"><%= link_to "About",   posts_path, class: 'nav-link' %></li>
+      <li class="nav-item active"><%= link_to 'Discography', discography_path, class: 'nav-link' %></li>
+      <li class="nav-item active"><%= link_to "Profile", profile_path, class: 'nav-link' %></li>
       <li class="nav-item active"><%= link_to "Contact", posts_path, class: 'nav-link' %></li>
       <% if user_signed_in? %>
         <!-- <li class="nav-item active"><%= link_to 'アカウント編集', edit_user_registration_path, class: 'nav-link' %></li> -->

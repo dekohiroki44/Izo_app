@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  default_scope -> { order(date: :desc) }
   mount_uploader :picture, PictureUploader
   validate  :picture_size
 
