@@ -1,12 +1,14 @@
-<li id="live-<%= live.id %>" class="live-info d-flex flex-column flex-sm-row">
-  <%= image_tag live.picture.url, class:"picture" if live.picture?  %>
-  <div class="live-column">
-    <span class="date"><%= live.date %></span>
-    <span class="place"><%= live.place %></span>
-    <span class="title"><%= live.title %></span>
-    <span class="time"><%= live.time %></span>
-    <span class="price"><%= live.price %></span>
-    <span class="performer"><%= live.performer %></span>
-    <span class="edit"><%= link_to 'edit'  %></span>
-  </div>
-</li>
+<%= link_to life_path(live.id), class: "partial-link" do %> 
+  <li id="live-<%= live.id %>" class="live-info d-flex flex-column  align-items-center flex-md-row ">
+    <%= image_tag live.picture.url, class:"picture" if live.picture?  %>
+    <div class="live-column d-flex flex-column align-items-center align-items-md-stretch">
+      <span class="date"><%= live.date %></span>
+      <span class="place"><%= live.place %></span>
+      <span class="title"><%= live.title %></span>
+      <span class="time"><%= live.time %></span>
+      <span class="price"><%= live.price %></span>
+      <span class="performer"><%= live.performer %></span>
+      <span class="edit"><%= link_to 'edit', edit_life_path(live.id) if user_signed_in?  %></span>
+    </div>
+  </li>
+<% end %>

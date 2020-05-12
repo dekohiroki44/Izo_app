@@ -4,6 +4,9 @@ class PagesController < ApplicationController
     @live = Live.first
   end
 
-  def about
+  def discography
+  end
+
+  def profile
   end
 end

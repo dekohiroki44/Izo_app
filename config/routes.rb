@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'pages#home'
-  get 'pages/about'
+  get '/discography', to: 'pages#discography'
+  get '/profile', to: 'pages#profile'
   resources :lives
   resources :posts
 end

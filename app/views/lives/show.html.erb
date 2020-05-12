@@ -1,2 +1,20 @@
-<h1>Lives#show</h1>
-<p>Find me in app/views/lives/show.html.erb</p>
+<% provide(:title, "LIVE") %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Live</h3>
+      <li id="live-<%= @live.id %>" class="live-info d-flex flex-column  align-items-center flex-md-row ">
+        <%= image_tag @live.picture.url, class:"picture" if @live.picture?  %>
+        <div class="live-column d-flex flex-column align-items-center align-items-md-stretch">
+          <span class="date"><%= @live.date %></span>
+          <span class="place"><%= @live.place %></span>
+          <span class="title"><%= @live.title %></span>
+          <span class="time"><%= @live.time %></span>
+          <span class="price"><%= @live.price %></span>
+          <span class="performer"><%= @live.performer %></span>
+          <span class="edit"><%= link_to 'edit', edit_life_path(@live.id) if user_signed_in?  %></span>
+        </div>
+      </li>
+    </div>
+  </div>
+</div>
