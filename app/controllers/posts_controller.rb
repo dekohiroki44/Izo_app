@@ -30,7 +30,7 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     if post.update_attributes(post_params)
-      flash[:success] = "postを編集しました"
+      flash[:success] = "newsを編集しました"
       redirect_to posts_url
     else
       render edit_post_path
