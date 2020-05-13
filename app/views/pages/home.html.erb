@@ -19,16 +19,20 @@
     <div class="main-section">
       <div class="row">
         <div class="col-md-9">
-          <div class="latest-news">
-            <h3>Latest News</h3>
-            <%= link_to 'Read more', posts_path, class: 'read-more' %>
-            <%= render @post %>
-          </div>
-          <div class="next-live">
-            <h3>Next Live</h3>
-            <%= link_to 'Read more', lives_path, class: 'read-more' %>
-            <%= render @live %>
-          </div>
+          <% if @post.present? %>
+            <div class="latest-news">
+              <h3>Latest News</h3>
+              <%= link_to 'Read more', posts_path, class: 'read-more' %>
+              <%= render @post %>
+            </div>
+          <% end %>
+          <% if @live.present? %>
+            <div class="next-live">
+              <h3>Next Live</h3>
+              <%= link_to 'Read more', lives_path, class: 'read-more' %>
+              <%= render @live %>
+            </div>
+          <% end %>
         </div>
         <div class="col-md-3 mt-5">
           <a class="twitter-timeline" data-height="400" href="https://twitter.com/Izo_ViS?ref_src=twsrc%5Etfw">Tweets by Izo_ViS</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
