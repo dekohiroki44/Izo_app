@@ -1,8 +1,11 @@
 <% provide(:title, "LIVE") %>
 <div class="container">
-  <div class="row">
+  <div class="row live-schedule">
     <div class="col-md-12">
       <h3>Live</h3>
+      <div class="ticket-btn">
+        <button type="button" onclick="location.href='https://ssl.form-mailer.jp/fms/b51a8ad5644311'" class="btn btn-dark btn-block">チケット予約</button>
+      </div>
       <li id="live-<%= @live.id %>" class="live-info d-flex flex-column  align-items-center flex-md-row ">
         <%= image_tag @live.picture.url, class:"picture" if @live.picture?  %>
         <div class="live-column d-flex flex-column align-items-center align-items-md-stretch">

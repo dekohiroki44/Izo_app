@@ -1,7 +1,7 @@
 <%# render 'shared/flash_messages' %>
 <div class="main-wrapper">
   <!-- <div class="center jumbotron"> -->
-    <h1>Izo Official Web Site</h1>
+    <h1><%= link_to 'Izo Official Web Site', root_path, class: 'heading' %></h1>
   <!-- </div> -->
   <div class="container">
     <div class="item-section mb-5 d-flex flex-column flex-md-row align-items-center justify-content-between">
@@ -18,18 +18,21 @@
     </div>
     <div class="main-section">
       <div class="row">
-        <div class="col-9">
+        <div class="col-md-9">
           <div class="latest-news">
             <h3>Latest News</h3>
+            <%= link_to 'Read more', posts_path, class: 'read-more' %>
             <%= render @post %>
           </div>
           <div class="next-live">
             <h3>Next Live</h3>
+            <%= link_to 'Read more', lives_path, class: 'read-more' %>
             <%= render @live %>
           </div>
         </div>
-        <div class="col-3">
-          <a class="twitter-timeline" data-height="1000" href="https://twitter.com/Izo_ViS?ref_src=twsrc%5Etfw">Tweets by Izo_ViS</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="col-md-3 mt-5">
+          <a class="twitter-timeline" data-height="400" href="https://twitter.com/Izo_ViS?ref_src=twsrc%5Etfw">Tweets by Izo_ViS</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <!-- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FIzoSoloArtist%2F&tabs=timeline&width=340&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=2623191774571195" width="340" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe> -->
         </div>
       </div>
     </div>
