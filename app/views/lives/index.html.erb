@@ -1,15 +1,14 @@
 <% provide(:title, "LIVE") %>
-<div class="container">
-  <div class="live-schedule row">
-    <div class="col-md-12">
-      <h3>Live schedule</h3>
-      <div class="ticket-btn">
-        <button type="button" onclick="location.href='https://ssl.form-mailer.jp/fms/b51a8ad5644311'" class="btn btn-dark btn-block">チケット予約</button>
-      </div>
-      <ol class="lives d-flex flex-column justify-content-center">
-        <%= render @lives %>
-      </ol>
+<div class="live-schedule row">
+  <div class="col-md-12">
+    <h3>Live schedule</h3>
+    <div class="ticket-btn">
+      <button type="button" onclick="location.href='https://ssl.form-mailer.jp/fms/b51a8ad5644311'" class="btn btn-dark btn-block">チケット予約</button>
     </div>
+    <ol class="lives d-flex flex-column justify-content-center">
+      <%= render @lives %>
+    </ol>
   </div>
 </div>
+
   
