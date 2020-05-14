@@ -94,10 +94,10 @@ p {
 }
 
 .partial-link {
-  color: #212529;
+  color: whitesmoke;
   &:hover {
     text-decoration: none;
-    color: #212529;
+    color: whitesmoke;
   }
 }
   
@@ -295,17 +295,17 @@ input {
 
 .live-info {
   color: white;
-  .picture {
+  .image {
     float: left;
     margin-right: 20px;
     margin-top: 5px;
-    width: 250px;
-    height: 250px;
+    // width: 250px;
+    // height: 250px;
   }
-  .picture-show {
-    width: 100%;
-    height: auto;
-  }
+  // .images-show {
+  //   width: 100%;
+  //   height: auto;
+  // }
   .date {
     display: block;
     margin-top: 1em;

@@ -29,6 +29,12 @@ class LivesController < ApplicationController
 
   def update
     live = Live.find(params[:id])
+    if params[:live][:image_ids]
+      params[:live][:image_ids].each do |image_id|
+        image = live.images.find(image_id)
+        image.purge
+      end
+    end
     if live.update_attributes(live_params)
       flash[:success] = "liveを編集しました"
       redirect_to lives_url
@@ -37,11 +43,18 @@ class LivesController < ApplicationController
     end
   end
 
+  def destroy
+    live = Live.find(params[:id])
+    live.destroy
+    flash[:success] = "liveを削除しました"
+    redirect_to lives_url
+  end
+
   private
 
   def live_params
     params.
     require(:live).
-    permit(:title, :description, :date, :place, :time, :price, :performer, :picture)
+    permit(:title, :description, :date, :place, :time, :price, :performer, images: [])
   end
 end
