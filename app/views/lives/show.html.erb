@@ -6,7 +6,13 @@
       <button type="button" onclick="location.href='https://ssl.form-mailer.jp/fms/b51a8ad5644311'" class="btn btn-dark btn-block">チケット予約</button>
     </div>
     <li id="live-<%= @live.id %>" class="live-info d-flex flex-column  align-items-center flex-lg-row ">
-      <%= image_tag @live.picture.url, class:"picture-show" if @live.picture?  %>
+      <div class="d-flex flex-column w-100">
+        <% if @live.images.attached? %>
+          <% @live.images.each do |image| %>
+            <%= image_tag image.variant(resize:'700x700').processed, class:"images-show mb-5" %>
+          <% end %>
+        <% end %>
+      </div>
       <div class="live-column mt-2 d-flex flex-column align-items-center align-items-md-stretch">
         <span class="date"><%= @live.date %></span>
         <span class="place"><%= @live.place %></span>
