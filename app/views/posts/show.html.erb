@@ -1,17 +1,15 @@
 <% provide(:title, "NEWS") %>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h3>News</h3>
-      <li id="post-<%= @post.id %>" class="post-info d-flex flex-column flex-sm-row">
-        <div class="post-column">
-          <span class="title"><%= @post.title %></span>
-          <span class="description"><%= @post.description %></span>
-          <span class="date"><%= @post.date %></span>
-          <span class="edit"><%= link_to 'edit', edit_post_path(@post.id) if user_signed_in?%></span>
-        </div>
-        <%= image_tag @post.picture.url, class:"picture" if @post.picture?  %>
-      </li>
-    </div>
+<div class="row">
+  <div class="col-md-12">
+    <h3>News</h3>
+    <li id="post-<%= @post.id %>" class="post-info d-flex flex-column flex-lg-row">
+      <div class="post-column">
+        <span class="title"><%= @post.title %></span>
+        <span class="description"><%= @post.description %></span>
+        <span class="date"><%= @post.date %></span>
+        <span class="edit"><%= link_to 'edit', edit_post_path(@post.id) if user_signed_in?%></span>
+      </div>
+      <%= image_tag @post.picture.url, class:"picture-show" if @post.picture?  %>
+    </li>
   </div>
 </div>
