@@ -6,6 +6,6 @@
       <span class="date"><%= post.date %></span>
       <span class="edit"><%= link_to 'edit', edit_post_path(post.id) if user_signed_in?%></span>
     </div>
-    <%= image_tag post.picture.url, class:"picture" if post.picture?  %>
+    <%= image_tag post.images.first.variant(resize:'250x250').processed, class:"image" if post.images.attached?  %>
   </li>
 <% end %>

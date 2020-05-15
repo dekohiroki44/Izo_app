@@ -9,7 +9,13 @@
         <span class="date"><%= @post.date %></span>
         <span class="edit"><%= link_to 'edit', edit_post_path(@post.id) if user_signed_in?%></span>
       </div>
-      <%= image_tag @post.picture.url, class:"picture-show" if @post.picture?  %>
+      <div class="d-flex flex-column w-100">
+        <% if @post.images.attached? %>
+          <% @post.images.each do |image| %>
+            <%= image_tag image.variant(resize:'700x700').processed, class:"images-show mb-5" %>
+          <% end %>
+        <% end %>
+      </div>
     </li>
   </div>
 </div>
