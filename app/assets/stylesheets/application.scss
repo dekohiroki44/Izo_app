@@ -150,7 +150,6 @@ footer {
   width: 250px;
 }
 
-
 .read-more {
   display: block;
   text-align: right;
@@ -173,17 +172,6 @@ footer {
     height: 100px;
     width: 150px;
   }
-}
-
-
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
 }
 
 /* forms */
@@ -214,18 +202,6 @@ input {
 //   }
 // }
 
-/* Users index */
-
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
-  }
-}
-
 /* post */
 
 .posts {
@@ -239,18 +215,18 @@ input {
 
 .post-info {
   color: white;
-  .picture {
+  .image {
     float: left;
     margin-left: 20px;
     margin-top: 5px;
-    width: 250px;
-    height: 250px;
+    // width: 250px;
+    // height: 250px;
   }
-  .picture-show {
+  .images-show {
     margin-left: 20px;
     margin-top: 5px;
-    width: 100%;
-    height: auto;
+    // width: 100%;
+    // height: auto;
   }
   .title {
     display: block;
@@ -304,7 +280,7 @@ input {
   }
   // .images-show {
   //   width: 100%;
-  //   height: auto;
+  //   // height: auto;
   // }
   .date {
     display: block;

@@ -29,6 +29,12 @@ class PostsController < ApplicationController
 
   def update
     post = Post.find(params[:id])
+    if params[:post][:image_ids]
+      params[:post][:image_ids].each do |image_id|
+        image = post.images.find(image_id)
+        image.purge
+      end
+    end
     if post.update_attributes(post_params)
       flash[:success] = "newsを編集しました"
       redirect_to posts_url
@@ -44,6 +50,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :description, :date, :picture)
+    params.require(:post).permit(:title, :description, :date, :images)
   end
 end
