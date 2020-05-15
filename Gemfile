@@ -9,27 +9,22 @@ gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
-# Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # gem 'bcrypt', '~> 3.1.7'
-gem 'mini_magick', '~> 4.8'
-gem 'carrierwave', '1.2.2'
 # gem 'capistrano-rails', group: :development
 gem 'bootsnap', '>= 1.1.0', require: false
-# ログイン機能
 gem 'devise'
-# 日本語化
 gem 'rails-i18n', '~> 5.1'
 gem 'devise-i18n'
-# Bootstrap
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
+gem 'mini_magick', '4.7.0'
+gem "aws-sdk-s3", require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
@@ -44,10 +39,6 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
-end
-
-group :production do
-  gem 'fog-aws'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
