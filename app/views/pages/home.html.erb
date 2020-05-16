@@ -1,15 +1,17 @@
 <h1><%= link_to 'Izo Official Web Site', root_path, class: 'heading' %></h1>
 <div class="item-section mb-5 d-flex flex-column flex-md-row align-items-center justify-content-between">
   <div>
-    <%= image_tag 'journeyman.jpeg', class: "item-picture" %>
+    <%= link_to discography_path do %>
+      <%= image_tag 'journeyman.jpeg', class: "item-picture item" %>
+    <% end %>
   </div>
-  <div class="item-info">
+  <div class="item-info item">
     <h4>1st solo alubum</h4>
     <h4>journeyman</h4>
     <h4>now on sale</h4>
     <h4>¥,2,500</h4>
   </div>
-  <div class="item-youtube">
+  <div class="item-youtube item">
     <iframe width="400" height="250" src="https://www.youtube.com/embed/UnRym7Mh7qg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </div>

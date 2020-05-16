@@ -100,7 +100,12 @@ p {
     color: whitesmoke;
   }
 }
-  
+
+.fa-twitter{color:#1da1f2;}
+.fa-facebook-square{color:#3b5998;}
+.fa-instagram{color:#e1306c;}
+.fa-youtube{color:#ff0000;}
+.fa-line{color:#00c300;}
 
 /* header */
 
@@ -119,8 +124,16 @@ header {
 /* footer */
 
 footer {
-  height: 50px;
+  height: 150px;
   padding-top: 10px;
+  color: whitesmoke;
+  .sns-icon {
+    margin: 20px;
+  }
+  small {
+    text-align: center;
+    display: block;
+  }
 }
 
 /* pages_home */
@@ -130,6 +143,12 @@ footer {
   &:hover {
     text-decoration: none;
     color: whitesmoke;
+  }
+}
+
+.item-section {
+  .item {
+    margin: 10px;
   }
 }
 
