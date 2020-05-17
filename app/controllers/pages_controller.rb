@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
     @post = Post.first
-    @live = Live.first
+    @live = Live.find_by('date >= ?', Date.today)
   end
 
   def discography
