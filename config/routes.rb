@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   get '/profile', to: 'pages#profile'
   resources :lives
   resources :posts
+  resources :contacts, only: [:new, :create]
 end
