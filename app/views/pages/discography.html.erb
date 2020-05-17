@@ -1,9 +1,46 @@
 <% provide(:title, "DISCOGRAPHY") %>
 <h3>Discography</h3>
-<div>
-  <%= image_tag 'journeyman.jpeg', class: "item-picture" %>
-</div>
-<div class="item-info">
-  <h4>journeyman</h4>
-  <h4>¥,2,500</h4>
+<div class="discography">
+  <div class="item-1">
+    <div class="info d-flex flex-column flex-md-row align-items-center justify-content-md-around">
+      <div class="image-box">
+        <%= image_tag 'journeyman.jpeg', class: "image" %>
+      </div>
+      <div class="column mx-3 mt-3">
+        <h4 class="title">Journeyman</h4>
+        <h4>2020.2.12 Release / ¥,2,750(Tax In)</h4>
+        <div class="track-list pt-2">
+          <h5>1.Overtime</h5>
+          <h5>2.In My Case</h5>
+          <h5>3.Journeyman</h5>
+          <h5>4.A Long Way From Here</h5>
+          <h5>5.Day by Day</h5>
+          <h5>6.Walking Down the Street</h5>
+          <h5>7.Eve</h5>
+          <h5>8.One's Dearest Wish</h5>
+          <h5>9.Fake Smile</h5>
+          <h5>10.Water Spider</h5>
+          <h5>11.I Wonder If...</h5>
+          <h5>12.It's a Beautiful Day</h5>
+        </div>
+      </div>
+    </div>
+    <div class="shop-list mt-5 d-flex flex-row justify-content-center">
+      <%= link_to 'https://diskunion.net/metal/ct/detail/HMHR191113-202', target: :_blank do %>
+        <%= image_tag 'dulogo.jpg', class: 'shop-logo' %>
+      <% end %>
+      <%= link_to 'https://tower.jp/item/4990627/Journeyman', target: :_blank do %>
+        <%= image_tag 'trlogo.png', class: 'shop-logo' %>
+      <% end %>
+      <%= link_to 'https://www.hmv.co.jp/artist_Izo_000000000820568/item_Journeyman_10426217', target: :_blank do %>
+        <%= image_tag 'hmvlogo.png', class: 'shop-logo' %>
+      <% end %>
+      <%= link_to 'https://merurido.jp/item.php?ky=MLBR0002', target: :_blank do %>
+        <%= image_tag 'merurilogo.png', class: 'shop-logo' %>
+      <% end %>
+    </div>
+    <div class="youtube">
+      <iframe src="https://www.youtube.com/embed/UnRym7Mh7qg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
 </div>
