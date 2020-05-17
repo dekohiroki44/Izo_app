@@ -1,5 +1,5 @@
 <% provide(:title, "LIVE - new") %>
-<h2>新規LIVE</h2>
+<h3>新規LIVE</h3>
 
 <%= form_with(model: @live, local: true) do |f| %>
   <div class="form-group text-light">
@@ -45,7 +45,6 @@
   <div class="form-group">
     <%= f.submit  '投稿する', class: 'btn btn-primary' %>
   </div>
-
 <% end %>
 
 <script type="text/javascript">
