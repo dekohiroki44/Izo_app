@@ -88,6 +88,10 @@ h3 {
   margin: 40px 0;
 }
 
+h5 {
+  font-weight: normal;
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -105,7 +109,6 @@ p {
 .fa-facebook-square{color:#3b5998;}
 .fa-instagram{color:#e1306c;}
 .fa-youtube{color:#ff0000;}
-.fa-line{color:#00c300;}
 
 /* header */
 
@@ -128,7 +131,7 @@ footer {
   padding-top: 10px;
   color: whitesmoke;
   .sns-icon {
-    margin: 20px;
+    margin: 0 5px 20px 5px;
   }
   small {
     text-align: center;
@@ -150,23 +153,23 @@ footer {
   .item {
     margin: 10px;
   }
-}
-
-.jumbotron {
-  height: 400px;
-  margin-bottom: 0;
-}
-
-.main-section {
-  padding: 30px 0;
-  h3 {
-    margin-bottom: 0;
+  .image {
+    height: 250px;
+    width: 250px;
+  }
+  .info {
+    text-align: center;
+    h4 {
+      line-height: 1.9;
+    }
   }
 }
 
-.item-picture {
-  height: 250px;
-  width: 250px;
+.main-section {
+  padding-top: 30px;
+  h3 {
+    margin-bottom: 0;
+  }
 }
 
 .read-more {
@@ -187,9 +190,7 @@ footer {
 .brand-section {
   margin-top: 100px;
   .brand-link {
-    margin-top: 50px;
-    height: 100px;
-    width: 150px;
+    width: 80%;
   }
 }
 
@@ -238,18 +239,13 @@ input {
     float: left;
     margin-left: 20px;
     margin-top: 5px;
-    // width: 250px;
-    // height: 250px;
   }
   .images-show {
     margin-left: 20px;
     margin-top: 5px;
-    // width: 100%;
-    // height: auto;
   }
   .title {
     display: block;
-    // margin-top: 1em;
     font-weight: bold;
     font-size: 20px;
   }
@@ -294,13 +290,7 @@ input {
     float: left;
     margin-right: 20px;
     margin-top: 5px;
-    // width: 250px;
-    // height: 250px;
   }
-  // .images-show {
-  //   width: 100%;
-  //   // height: auto;
-  // }
   .date {
     display: block;
     margin-top: 1em;
@@ -339,6 +329,37 @@ input {
   .edit {
     display: block;
     margin-left: 30px;
+  }
+}
+
+/* discography */
+
+.discography {
+  .image {
+    height: 400px;
+    width: 400px;
+  }
+  .title {
+    font-size: 2em;
+    margin-bottom: 12px;
+  }
+  .youtube{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 75%;
+  }
+  .youtube iframe{
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 20%);
+      width: 70%;
+      height: 70%;
+  }
+  .shop-logo {
+    width: 70px;
+    margin: 0 5px;
   }
 }
 
