@@ -1,5 +1,5 @@
 <% provide(:title, "LIVE - edit") %>
-<h2>LIVEを編集する</h2>
+<h3>LIVEを編集する</h3>
 <%= link_to '削除する', @live, method: :delete, class: 'mb-3 btn btn-dark', data: { confirm: '削除してよろしいですか？'} %>
 <%= form_with(model: @live, local: true) do |f| %>
   <div class="form-group text-light">
