@@ -1,4 +1,7 @@
 <h1><%= link_to 'Izo Official Web Site', root_path, class: 'heading' %></h1>
+<!-- <%= link_to root_path, class: 'heading' do %>
+  <%= image_tag 'izo_icon.png', class: 'logo' %>
+<% end %> -->
 <div class="item-section mb-5 d-flex flex-column flex-md-row align-items-center justify-content-between">
   <div>
     <%= link_to discography_path do %>
@@ -47,17 +50,20 @@
     </div>
   </div>
   <div class="brand-section row">
-    <%= link_to 'http://blackcloud.co.jp/', target: :_blank, class: 'col-3' do %>
+    <%= link_to 'http://blackcloud.co.jp/', target: :_blank, class: 'col-2  offset-1' do %>
       <%= image_tag 'bcglogo.png', class: 'brand-link' %>
     <% end %>
-    <%= link_to 'http://www.kikutani.co.jp/DR/', target: :_blank, class: 'col-3 mt-2' do %>
+    <%= link_to 'http://www.kikutani.co.jp/DR/', target: :_blank, class: 'col-2 mt-2' do %>
       <%= image_tag 'drlogo.jpeg', class: 'brand-link' %>
     <% end %>
-    <%= link_to 'https://www.kikutani.co.jp/righton/', target: :_blank, class: 'col-3 mt-2' do %>
+    <%= link_to 'https://www.kikutani.co.jp/righton/', target: :_blank, class: 'col-2 mt-2' do %>
       <%= image_tag 'rslogo2.png', class: 'brand-link' %>
     <% end %>
-    <%= link_to 'https://nakano-music.co.jp/', target: :_blank, class: 'col-3 mt-2' do %>
+    <%= link_to 'https://nakano-music.co.jp/', target: :_blank, class: 'col-2 mt-2' do %>
       <%= image_tag 'pblogo2.png', class: 'brand-link' %>
+    <% end %>
+    <%= link_to 'https://www.kikutani.co.jp/itemlist/16295/', target: :_blank, class: 'col-3 mt-2' do %>
+      <%= image_tag 'nnlogo.png', class: 'brand-link' %>
     <% end %>
   </div>
 </div>
