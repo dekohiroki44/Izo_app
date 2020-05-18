@@ -19,8 +19,8 @@
         <span class="title"><%= @live.title %></span>
         <span class="time"><%= @live.time %></span>
         <span class="price"><%= @live.price %></span>
-        <span class="performer"><%= @live.performer %></span>
-        <span class="description"><%= @live.description %></span>
+        <span class="performer"><%= simple_format(h(@live.performer)) %></span>
+        <span class="description"><%= simple_format(h(@live.description)) %></span>
         <span class="edit"><%= link_to 'edit', edit_life_path(@live.id) if user_signed_in?  %></span>
       </div>
     </li>
