@@ -1,8 +1,9 @@
 <%= link_to life_path(live.id), class: "partial-link" do %> 
   <li id="live-<%= live.id %>" class="live-info d-flex flex-column  align-items-center flex-md-row ">
     <%= image_tag live.images.first.variant(resize:'250x250').processed, class:"image" if live.images.attached?  %>
-    <div class="live-column d-flex flex-column align-items-center align-items-md-stretch">
-      <span class="date"><%= live.date %> / <%= live.place %></span>
+    <div class="live-column d-flex flex-column">
+      <span class="date"><%= live.date %></span>
+      <span class="place"><%= live.place %></span>
       <span class="title"><%= live.title %></span>
       <span class="time"><%= live.time %></span>
       <span class="price"><%= live.price %></span>

@@ -3,8 +3,8 @@
 ------------------------------------------------
 <p>差出人: <%= @contact.sender %></p>
 
-<p>email: <%= @contact.email %></p>
+<p>メールアドレス: <%= @contact.email %></p>
 
-<p>subject: <%= @contact.subject %></p>
+<p>件名: <%= @contact.subject %></p>
 
-<p>content: <%= @contact.content %></p>
+<p>本文: <%= simple_format(h(@contact.content)) %></p>
