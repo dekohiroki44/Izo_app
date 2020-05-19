@@ -7,4 +7,4 @@
 
 <p>subject: <%= @contact.subject %></p>
 
-<p>content: <%= @contact.content %></p>
+<p>content: <%= simple_format(h(@contact.content)) %></p>
