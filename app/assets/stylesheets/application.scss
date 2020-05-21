@@ -128,7 +128,7 @@ footer {
   padding-top: 10px;
   color: whitesmoke;
   .sns-icon {
-    margin: 0 5px 20px 5px;
+    margin: 0 3px 20px 3px;
   }
   small {
     text-align: center;
@@ -187,7 +187,10 @@ footer {
 .brand-section {
   margin-top: 100px;
   .brand-link {
-    width: 80%;
+    padding: 0;
+    .brand-logo {
+      width: 80%;
+    }
   }
 }
 
