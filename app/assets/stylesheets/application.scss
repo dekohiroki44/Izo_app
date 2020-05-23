@@ -147,17 +147,35 @@ footer {
 }
 
 .item-section {
+  text-align: center;
   .item {
     margin: 10px;
+    width: 100%;
   }
   .image {
-    height: 250px;
-    width: 250px;
+    max-width: 400px;
   }
   .info {
-    text-align: center;
     h4 {
       line-height: 1.9;
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .item-section {
+    .youtube {
+      width:100%;
+      padding-bottom: 56.25%;
+      height:0px;
+      position: relative;
+    }
+    .youtube iframe {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 }
@@ -182,6 +200,16 @@ footer {
 
 .sns-box {
   text-align: center;
+  .twitcas-cm {
+    background-color: #1da1f2;
+    p {
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+    .izo-chara {
+      width: 50%;
+    }
+  }
 }
 
 .brand-section {
@@ -272,6 +300,15 @@ input {
   .ticket-btn {
     text-align: center;
     margin-bottom: 15px;
+    button {
+      height: 50px;
+      font-weight: bold;
+      font-size: 1.5em;
+      .mask {
+        height: 90%;
+        margin: 0 10px 3px 10px;
+      }
+    }
   }
 }
 
@@ -351,7 +388,7 @@ input {
     position: relative;
     width: 100%;
     height: 0;
-    padding-top: 75%;
+    padding-top: 56.25%;
   }
   .youtube iframe{
       position: absolute;
