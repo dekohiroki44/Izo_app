@@ -2,9 +2,7 @@
 <div class="live-schedule row">
   <div class="col-md-12">
     <h3>Live schedule</h3>
-    <div class="ticket-btn">
-      <button type="button" onclick="window.open('https://ssl.form-mailer.jp/fms/b51a8ad5644311','blank')" class="btn btn-dark btn-block">チケット予約</button>
-    </div>
+    <%= render "ticket_btn" %>
     <ol class="lives d-flex flex-column justify-content-center">
       <%= render @lives %>
     </ol>
