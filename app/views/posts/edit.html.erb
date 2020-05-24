@@ -1,5 +1,6 @@
 <% provide(:title, "NEWS - edit") %>
 <h3>NEWSを編集する</h3>
+<%= link_to '削除する', @post, method: :delete, class: 'mb-3 btn btn-dark', data: { confirm: '削除してよろしいですか？'} %>
 
 <%= form_with(model: @post, local: true) do |f| %>
   <div class="form-group text-light">
