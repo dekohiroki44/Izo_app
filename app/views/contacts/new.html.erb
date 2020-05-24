@@ -1,36 +1,39 @@
 <% provide(:title, "CONTACT") %>
-<h3>お問い合わせフォーム</h3>
-
-<div class="ticket-btn">
-  <button type="button" onclick="window.open('https://ssl.form-mailer.jp/fms/b51a8ad5644311','blank')" class="btn btn-dark btn-block">チケット予約のお申し込みはこちらをクリックして下さい</button>
-</div>
-<div class="contact-alert my-5">
-  <p>その他のご要望は以下のメールフォームよりご連絡ください。</p>
-  <p>送信された内容はスタッフが確認次第返信させて頂きます。</p>
-  <p>一週間以上返信がない場合は大変お手数ですがもう一度お問い合わせください。</p>
-  <p>尚、送信内容によってはご返答しかねるものもございますので予めご了承下さい。</p>
-</div>
-
-<%= form_for @contact do |f| %>
-  <div class="form-group text-light">
-    <%= f.label :sender, 'お名前' %>
-    <%= f.text_field :sender, class: 'form-control' %>
+<div class="contact">
+  <h3>お問い合わせフォーム</h3>
+  
+  <div class="ticket-btn">
+    <button type="button" onclick="window.open('https://ssl.form-mailer.jp/fms/b51a8ad5644311','blank')" class="btn btn-dark btn-block">
+      <%= image_tag 'mask.png', class: 'mask' %>ライブチケットのお申し込みはこちらをクリックして下さい<%= image_tag 'mask.png', class: 'mask' %></button>
   </div>
-
-  <div class="form-group text-light">
-    <%= f.label :email, '返信先メールアドレス' %>
-    <%= f.email_field :email, class: 'form-control' %>
+  <div class="contact-alert my-5">
+    <p>その他のご要望は以下のメールフォームよりご連絡ください。</p>
+    <p>送信された内容はスタッフが確認次第返信させて頂きます。</p>
+    <p>一週間以上返信がない場合は大変お手数ですがもう一度お問い合わせください。</p>
+    <p>尚、送信内容によってはご返答しかねるものもございますので予めご了承下さい。</p>
   </div>
-
- <div class="form-group text-light">
-   <%= f.label :subject, '件名' %>
-   <%= f.text_field :subject, class: 'form-control' %>
- </div>
-
- <div class="form-group text-light">
-   <%= f.label :content, 'お問い合わせ内容' %>
-   <%= f.text_area :content, size: '10x10', class: 'form-control' %>
- </div>
-
-  <%= f.submit '送信', class: 'btn btn-dark' %>
-<% end %>
+  
+  <%= form_for @contact do |f| %>
+    <div class="form-group text-light">
+      <%= f.label :sender, 'お名前' %>
+      <%= f.text_field :sender, class: 'form-control' %>
+    </div>
+  
+    <div class="form-group text-light">
+      <%= f.label :email, '返信先メールアドレス' %>
+      <%= f.email_field :email, class: 'form-control' %>
+    </div>
+  
+   <div class="form-group text-light">
+     <%= f.label :subject, '件名' %>
+     <%= f.text_field :subject, class: 'form-control' %>
+   </div>
+  
+   <div class="form-group text-light">
+     <%= f.label :content, 'お問い合わせ内容' %>
+     <%= f.text_area :content, size: '10x10', class: 'form-control' %>
+   </div>
+  
+    <%= f.submit '送信', class: 'btn btn-dark' %>
+  <% end %>
+</div>
