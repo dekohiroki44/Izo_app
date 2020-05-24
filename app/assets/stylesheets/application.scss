@@ -182,35 +182,41 @@ footer {
 
 .main-section {
   padding-top: 30px;
-  h3 {
-    margin-bottom: 0;
-  }
-}
-
-.read-more {
-  display: block;
-  text-align: right;
-  color: whitesmoke;
-  padding-bottom: 10px;
-  &:hover {
-    text-decoration: none;
-    color: whitesmoke;
-  }
-}
-
-.sns-box {
-  text-align: center;
-  .twitcas-cm {
-    background-color: #1da1f2;
-    p {
+  display: flex;
+  flex-wrap: wrap;
+  .main {
+    h3 {
       margin-bottom: 0;
-      font-weight: bold;
     }
-    .izo-chara {
-      width: 50%;
+    .read-more {
+      display: block;
+      text-align: right;
+      color: whitesmoke;
+      padding-bottom: 10px;
+      &:hover {
+        text-decoration: none;
+        color: whitesmoke;
+      }
+    }
+  }
+  .side {
+    .sns-box {
+      text-align: center;
+      .twitcas-cm {
+        background-color: #1da1f2;
+        p {
+          margin-bottom: 0;
+          font-weight: bold;
+        }
+        .izo-chara {
+          width: 50%;
+        }
+      }
     }
   }
 }
+
+
 
 .brand-section {
   margin-top: 100px;
@@ -242,13 +248,6 @@ input {
     margin: 0 0 30px 0;
   }
 }
-
-// .field_with_errors {
-//   @extend .has-error;
-//   .form-control {
-//     color: $state-danger-text;
-//   }
-// }
 
 /* post */
 
