@@ -21,7 +21,7 @@ gem 'rails-i18n', '~> 5.1'
 gem 'devise-i18n'
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
-gem 'mini_magick', '4.7.0'
+gem 'mini_magick', '4.9.4'
 gem "aws-sdk-s3", require: false
 
 group :development, :test do
