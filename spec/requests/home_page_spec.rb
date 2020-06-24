@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "home", type: :request do
+RSpec.describe "home_page", type: :request do
   let!(:live) { build(:live) }
   let!(:post) { build(:post) }
 
