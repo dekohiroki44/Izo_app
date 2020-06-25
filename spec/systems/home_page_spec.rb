@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe "home_page", type: :request do
+RSpec.describe "home_page", type: :system do
   let!(:live) { build(:live) }
   let!(:post) { build(:post) }
 
   before do
-    get root_path
+    visit root_path
   end
 
   it 'shows link' do
