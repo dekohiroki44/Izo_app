@@ -2,7 +2,7 @@
 <h2>アプリケーションの概要</h2>
 ギタリストIzoの活動を紹介するサイト
 <a href="https://izo-guitar.com/" alt="URL">https://izo-guitar.com/</a>
-<img src="./public/assets/intro.png" title="IzoOfficialWebSite-image">
+<img src="./app/assets/images/intro.png" title="IzoOfficialWebSite-image">
 <h2>アプリケーションの目的</h2>
 <p>プログラミングができないユーザーはWeb Siteを作成してもらったとしても、自身で更新する事ができないため何かある度に更新を依頼しないといけません。</p>
 <p>この課題を解決するために、自身で記事を更新できる仕組みを備えたWeb Siteを開発しました。</p>
