@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
-    @post = Post.first
+    @post1 = Post.first
+    @post2 = Post.second
     @live = Live.find_by('date >= ?', Date.today)
   end
 
