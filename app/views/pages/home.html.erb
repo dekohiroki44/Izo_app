@@ -16,12 +16,15 @@
 </div>
 <div class="main-section row">
   <div class="main col-md-9">
-    <% if @post.present? %>
+    <% if @post1.present? %>
       <div class="latest-news">
         <h3>Latest News</h3>
         <%= link_to 'Read more', posts_path, class: 'read-more' %>
-        <%= render @post %>
+        <%= render @post1 %>
       </div>
+    <% if @post2.present? %>
+      <%= render @post2 %>
+    <% end %>
     <% end %>
     <% if @live.present? %>
       <div class="next-live">
