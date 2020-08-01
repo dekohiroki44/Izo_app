@@ -8,6 +8,7 @@
       <span class="time"><%= live.time %></span>
       <span class="price"><%= live.price %></span>
       <span class="performer"><%= simple_format(h(live.performer)) %></span>
+      <%= link_to live.url, live.url, target: :_blank, class: "url" %>
       <span class="edit"><%= link_to 'edit', edit_life_path(live.id) if user_signed_in?  %></span>
     </div>
   </li>

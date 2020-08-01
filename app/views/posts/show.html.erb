@@ -6,6 +6,7 @@
       <div class="post-column">
         <span class="title"><%= @post.title %></span>
         <span class="description"><%= simple_format(h(@post.description)) %></span>
+        <%= link_to @post.url, @post.url, target: :_blank, class: "url" %>
         <span class="date"><%= @post.date %></span>
         <span class="edit"><%= link_to 'edit', edit_post_path(@post.id) if user_signed_in?%></span>
       </div>

@@ -345,29 +345,10 @@ input {
     font-weight: bold;
     font-size: 30px;
   }
-  .time {
+  .time, .price, .performer, .url, .desctiption, .edit {
     display: block;
     margin-left: 30px;
     font-weight: normal;
-  }
-  .price {
-    display: block;
-    margin-left: 30px;
-    font-weight: normal;
-  }
-  .performer {
-    display: block;
-    margin-left: 30px;
-    font-weight: normal;
-  }
-  .description {
-    display: block;
-    margin-left: 30px;
-    font-weight: normal;
-  }
-  .edit {
-    display: block;
-    margin-left: 30px;
   }
 }
 
