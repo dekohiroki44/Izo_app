@@ -3,7 +3,7 @@
     <div class="post-column">
       <span class="title"><%= post.title %></span>
       <span class="description"><%= simple_format(h(post.description)) %></span>
-      <%= link_to post.url, post.url, target: :_blank, class: "url" %>
+      <%= link_to post.sitelink, post.sitelink, target: :_blank, rel: :noopener, class: "sitelink" if post.sitelink%>
       <span class="date"><%= post.date %></span>
       <span class="edit"><%= link_to 'edit', edit_post_path(post.id) if user_signed_in?%></span>
     </div>

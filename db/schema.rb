@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2020_07_31_125030) do
     t.text "performer"
     t.string "time"
     t.string "price"
-    t.string "url"
+    t.string "sitelink"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 2020_07_31_125030) do
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "url"
+    t.string "sitelink"
   end
 
   create_table "users", force: :cascade do |t|
