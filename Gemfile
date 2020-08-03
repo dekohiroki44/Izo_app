@@ -19,6 +19,7 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem "mini_magick", ">= 4.9.4"
 gem "aws-sdk-s3", require: false
+gem 'rails_autolink'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
