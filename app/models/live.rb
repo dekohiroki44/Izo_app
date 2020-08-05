@@ -1,4 +1,4 @@
 class Live < ApplicationRecord
-  default_scope -> { order(date: :asc) }
+  default_scope -> { order(date: :desc) }
   has_many_attached :images
 end
