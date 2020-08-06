@@ -245,6 +245,28 @@ input {
   }
 }
 
+/* post & live*/
+
+.show-image-section {
+  width: 100%;
+  .image {
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .show-image-section {
+    width: 60% !important;
+  }
+  .post-info {
+    .image {
+      padding-left: 10px !important;
+    }
+  }
+}
+
 /* post */
 
 .posts {
@@ -286,6 +308,7 @@ input {
   }
 }
 
+
 /* ticket-btn */
 
 .ticket-btn {
@@ -324,31 +347,14 @@ input {
   .image {
     float: left;
     margin-right: 20px;
-    margin-top: 5px;
   }
-  .date {
-    display: block;
-    margin-top: 1em;
-    margin-left: 30px;
-    font-weight: bold;
+  .date, .place, .title {
     font-size: 30px;
-  }
-  .place {
-    display: block;
-    margin-left: 30px;
     font-weight: bold;
-    font-size: 30px;
   }
-  .title {
+  .date, .place, .title, .time, .price, .performer, .sitelink, .description, .edit {
     display: block;
     margin-left: 30px;
-    font-weight: bold;
-    font-size: 30px;
-  }
-  .time, .price, .performer, .sitelink, .description, .edit {
-    display: block;
-    margin-left: 30px;
-    font-weight: normal;
   }
 }
 
