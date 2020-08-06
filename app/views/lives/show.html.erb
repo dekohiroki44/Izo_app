@@ -4,10 +4,10 @@
     <h3>Live</h3>
     <%= render "ticket_btn" %>
     <li id="live-<%= @live.id %>" class="live-info d-flex flex-column  align-items-center flex-lg-row ">
-      <div class="d-flex flex-column w-100">
+      <div class="d-flex flex-column show-image-section">
         <% if @live.images.attached? %>
           <% @live.images.each do |image| %>
-            <%= image_tag image.variant(resize:'700x700').processed, class:"images-show mb-5" %>
+            <%= image_tag image, class:"image mb-1" %>
           <% end %>
         <% end %>
       </div>
@@ -18,7 +18,7 @@
         <span class="time"><%= @live.time %></span>
         <span class="price"><%= @live.price %></span>
         <span class="performer"><%= simple_format(h(@live.performer)) %></span>
-        <%= link_to @live.sitelink, @live.sitelink, target: :_blank, rel: :noopener, class: "url" if @live.sitelink %>
+        <%= link_to @live.sitelink, @live.sitelink, target: :_blank, rel: :noopener, class: "sitelink" if @live.sitelink %>
         <span class="description"><%= simple_format(h(@live.description)) %></span>
         <span class="edit"><%= link_to 'edit', edit_life_path(@live.id) if user_signed_in?  %></span>
       </div>
