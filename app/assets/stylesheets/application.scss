@@ -262,7 +262,7 @@ input {
   }
   .post-info {
     .image {
-      padding-left: 10px !important;
+      padding-left: 20px !important;
     }
   }
 }
@@ -280,15 +280,6 @@ input {
 
 .post-info {
   color: white;
-  .image {
-    float: left;
-    margin-left: 20px;
-    margin-top: 5px;
-  }
-  .images-show {
-    margin-left: 20px;
-    margin-top: 5px;
-  }
   .title {
     display: block;
     font-weight: bold;
@@ -301,6 +292,7 @@ input {
     color: $gray-light;
     text-align: right;
     display: block;
+    margin-bottom: 10px;
   }
   .edit {
     display: block;
