@@ -37,12 +37,17 @@
   </div>
   <div class="side col-md-3 mt-5">
     <div class="sns-box">
+      <%= link_to '編集', edit_user_path(@user), remote: true if @user %>
       <%= link_to 'https://twitcasting.tv/Izo_ViS', target: :_blank do %>
         <div class="twitcas-cm mb-5 px-3 d-flex flex-row flex-md-column align-items-center">
           <div class="message mt-3">
             <p>ツイキャスライブ</p>
-            <p>不定期配信中</p>
-            <p>初見・初コメ大歓迎 !!</p>
+            <% if @user.twitcasting_announcement.present? %> 
+              <p><%= simple_format(h(@user.twitcasting_announcement)) %></p>
+            <% else %>
+              <p>不定期配信中</p>
+              <p>初見・初コメ大歓迎 !!</p>
+            <% end %>
           </div>
           <%= image_tag 'izo_chara.png', class: 'izo-chara' %>
         </div>
@@ -71,3 +76,5 @@
     <%= image_tag 'nnlogo.png', class: 'brand-logo' %>
   <% end %>
 </div>
+
+<div class="modal fade" id="twitcasting-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
