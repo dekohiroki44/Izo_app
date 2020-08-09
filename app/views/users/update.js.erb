@@ -1,0 +1,6 @@
+<% if @status == 'success' %>
+$("#twitcasting_content").html("<%= j(render("twitcasting_content", user: @user)) %>");
+<%  elsif @status == 'fail' %>
+alert('error!');
+<% end %>
+$("#twitcasting-modal").modal("hide");

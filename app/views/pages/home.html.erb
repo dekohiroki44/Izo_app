@@ -38,17 +38,22 @@
   <div class="side col-md-3 mt-5">
     <div class="sns-box">
       <%= link_to 'https://twitcasting.tv/Izo_ViS', target: :_blank do %>
-        <div class="twitcas-cm mb-5 px-3 d-flex flex-row flex-md-column align-items-center">
+        <div class="twitcas-cm px-3 d-flex flex-row flex-md-column align-items-center">
           <div class="message mt-3">
-            <p>ツイキャスライブ</p>
-            <p>不定期配信中</p>
-            <p>初見・初コメ大歓迎 !!</p>
+            <div id="twitcasting_content">
+              <%= render "users/twitcasting_content", user: @user %>
+            </div>
           </div>
           <%= image_tag 'izo_chara.png', class: 'izo-chara' %>
         </div>
       <% end %>
+      <% if user_signed_in? %>
+        <%= link_to edit_user_path(@user), remote: true do %>
+          <i class="fas fa-wrench ml-1"></i>
+        <% end %>
+      <% end %>
     </div>
-    <div class="sns-box">
+    <div class="sns-box mt-5">
       <a class="twitter-timeline" data-height="450" href="https://twitter.com/Izo_ViS?ref_src=twsrc%5Etfw">Tweets by Izo_ViS</a>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
@@ -71,3 +76,5 @@
     <%= image_tag 'nnlogo.png', class: 'brand-logo' %>
   <% end %>
 </div>
+
+<div class="modal fade" id="twitcasting-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
