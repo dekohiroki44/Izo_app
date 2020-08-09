@@ -1,0 +1,7 @@
+<% if user.twitcasting_announcement.present? %> 
+  <p><%= simple_format(h(user.twitcasting_announcement)) %></p>
+<% else %>
+  <p>ツイキャスライブ</p>
+  <p>不定期配信中</p>
+  <p>初見・初コメ大歓迎 !!</p>
+<% end %>

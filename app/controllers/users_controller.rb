@@ -6,11 +6,14 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update_attributes(user_params)
-      flash[:success] = "設定しました"
-      redirect_to root_path
-    else
-      format.js { render root_path }
+      respond_to do |format|
+      if @user.update_attributes(user_params)
+        format.html { redirect_to root_path, notice: '設定しました'}
+        format.js { @status = "success"}
+      else
+        format.html { render root_path }
+        format.js { render root_path }
+      end
     end
   end
 
@@ -18,9 +21,9 @@ class UsersController < ApplicationController
 
   def set_user
     if Rails.env.development? || Rails.env.test?
-      @user = current_user
+      @user = User.find_by(email: Rails.application.credentials.account[:mail][:hiroki])
     elsif Rails.env.production?
-      @user = User.find(email: Rails.application.credentials.account[:mail][:izo])
+      @user = User.find_by(email: Rails.application.credentials.account[:mail][:izo]) || User.find_by(email: Rails.application.credentials.account[:mail][:hiroki])
     end
   end
 
