@@ -6,10 +6,10 @@ class UsersController < ApplicationController
   end
 
   def update
-      respond_to do |format|
+    respond_to do |format|
       if @user.update_attributes(user_params)
-        format.html { redirect_to root_path, notice: '設定しました'}
-        format.js { @status = "success"}
+        format.html { redirect_to root_path, notice: '設定しました' }
+        format.js { @status = "success" }
       else
         format.html { render root_path }
         format.js { render root_path }
@@ -20,10 +20,13 @@ class UsersController < ApplicationController
   private
 
   def set_user
-    if Rails.env.development? || Rails.env.test?
+    if Rails.env.development?
       @user = User.find_by(email: Rails.application.credentials.account[:mail][:hiroki])
+    elsif Rails.env.test?
+      @user = User.first
     elsif Rails.env.production?
-      @user = User.find_by(email: Rails.application.credentials.account[:mail][:izo]) || User.find_by(email: Rails.application.credentials.account[:mail][:hiroki])
+      @user = User.find_by(email: Rails.application.credentials.account[:mail][:izo]) ||
+        User.find_by(email: Rails.application.credentials.account[:mail][:hiroki])
     end
   end
 

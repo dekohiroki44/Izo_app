@@ -196,6 +196,7 @@ footer {
     }
   }
   .side {
+    margin-top: 38px;
     .sns-box {
       text-align: center;
       .twitcas-cm {
@@ -213,8 +214,6 @@ footer {
     }
   }
 }
-
-
 
 .brand-section {
   margin-top: 100px;
@@ -292,13 +291,11 @@ input {
   }
   .date {
     color: $gray-light;
-    text-align: right;
     display: block;
     margin-bottom: 10px;
   }
   .edit {
     display: block;
-    text-align: right;
   }
 }
 

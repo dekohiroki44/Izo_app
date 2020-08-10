@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "home_page", type: :system do
+  let!(:user) { create(:user) }
   let!(:live) { build(:live) }
   let!(:post) { build(:post) }
 
