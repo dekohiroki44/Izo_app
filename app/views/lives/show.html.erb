@@ -20,7 +20,11 @@
         <span class="performer"><%= simple_format(h(@live.performer)) %></span>
         <%= link_to @live.sitelink, @live.sitelink, target: :_blank, rel: :noopener, class: "sitelink" if @live.sitelink %>
         <span class="description"><%= simple_format(h(@live.description)) %></span>
-        <span class="edit"><%= link_to 'edit', edit_life_path(@live.id) if user_signed_in?  %></span>
+        <% if user_signed_in? %>
+          <%= link_to edit_life_path(@live.id), class: "edit" do %>
+            <i class="fas fa-wrench ml-1"></i>
+          <% end %>
+        <% end %>
       </div>
     </li>
   </div>

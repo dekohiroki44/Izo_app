@@ -10,7 +10,7 @@ RSpec.describe "lives_interface", type: :system, js: true do
     fill_in 'パスワード', with: user.password
     click_button 'ログイン'
   end
-  
+
   it 'creates live' do
     visit new_life_path
     expect { click_button '投稿する' }.to change(Live, :count)

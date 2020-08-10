@@ -2,10 +2,14 @@
   <li id="post-<%= post.id %>" class="post-info d-flex flex-column flex-md-row align-items-center">
     <div class="post-column">
       <span class="title"><%= post.title %></span>
+      <span class="date"><%= post.date %></span>
       <span class="description"><%= simple_format(h(post.description)) %></span>
       <%= link_to post.sitelink, post.sitelink, target: :_blank, rel: :noopener, class: "sitelink" if post.sitelink%>
-      <span class="date"><%= post.date %></span>
-      <span class="edit"><%= link_to 'edit', edit_post_path(post.id) if user_signed_in?%></span>
+      <% if user_signed_in? %>
+          <%= link_to edit_post_path(post.id), class: "edit" do %>
+            <i class="fas fa-wrench ml-1"></i>
+          <% end %>
+      <% end %>
     </div>
     <%= image_tag post.images.first.variant(resize:'250x250').processed, class:"image" if post.images.attached?  %>
   </li>
