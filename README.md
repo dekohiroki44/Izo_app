@@ -4,8 +4,8 @@
 <a href="https://izo-guitar.com/" alt="URL">https://izo-guitar.com/</a>
 <img src="./app/assets/images/intro.png" title="IzoOfficialWebSite-image">
 <h2>アプリケーションの目的</h2>
-<p>プログラミングができないユーザーはWeb Siteを作成してもらったとしても、自身で更新する事ができないため何かある度に更新を依頼しないといけません。</p>
-<p>この課題を解決するために、自身で記事を更新できる仕組みを備えたWeb Siteを開発しました。</p>
+<p>プログラミングができないユーザーはWebサイトを作成してもらったとしても、自身で更新する事ができないため何かある度に更新を依頼しないといけません。</p>
+<p>この課題を解決するために、自身で記事を更新できる仕組みを備えたWebサイトを開発しました。</p>
 <h2>アプリケーションの機能一覧</h2>
 <ul>
   <li>ユーザー認証機能（Devise）</li>
@@ -31,6 +31,7 @@
   <li>テスト（RSpec）</li>
   <li>リンター（Rubocop Airbnb）</li>
   <li>GitHub（GitHub Flowでの開発）</li>
+  <li>Javascript / JQuery / Ajax</li>
   <li>Sendgridでのメールサービス</li>
   <li>独自ドメインでのSSL化</li>
 </ul>
