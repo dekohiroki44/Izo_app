@@ -199,8 +199,7 @@ footer {
     margin-top: 38px;
     .sns-box {
       text-align: center;
-      .twitcas-cm {
-        background-color: #0075FF;
+      .twitcas-cm, .one-word {
         border: 5px double black;
         border-radius: 2%;
         p {
@@ -210,6 +209,12 @@ footer {
         .izo-chara {
           width: 50%;
         }
+      }
+      .twitcas-cm {
+        background-color: #0075FF;
+      }
+      .one-word {
+        background-color: wheat;
       }
     }
   }

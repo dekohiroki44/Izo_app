@@ -1,0 +1,6 @@
+<% if @status == 'success' %>
+$("#one_word_content").html("<%= j(render("content")) %>");
+<%  elsif @status == 'fail' %>
+alert('error!');
+<% end %>
+$("#one-word-modal").modal("hide");

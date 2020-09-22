@@ -37,6 +37,29 @@
   </div>
   <div class="side col-md-3">
     <div class="sns-box">
+      <% if OneWord.first.present? %>
+        <div class="one-word px-3 d-flex flex-column align-items-center">
+          <div class="message mt-3">
+            <p>一言ギター日記</p>
+            <div id="one_word_content">
+              <%= render "one_words/content" %>
+            </div>
+          </div>
+        </div>
+        <% if user_signed_in? %>
+          <%= link_to edit_one_word_path(OneWord.first), remote: true do %>
+            <i class="fas fa-wrench ml-1"></i>
+          <% end %>
+        <% end %>
+      <% else %>
+        <% if user_signed_in? %>
+          <%= link_to new_one_word_path, remote: true do %>
+            <i class="fas fa-wrench ml-1"></i>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="sns-box">
       <%= link_to 'https://twitcasting.tv/Izo_ViS', target: :_blank do %>
         <div class="twitcas-cm px-3 d-flex flex-column align-items-center">
           <div class="message mt-3">
@@ -77,4 +100,5 @@
   <% end %>
 </div>
 
+<div class="modal fade" id="one-word-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
 <div class="modal fade" id="twitcasting-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
