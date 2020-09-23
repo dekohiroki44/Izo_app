@@ -2,9 +2,21 @@
   <div class="modal-content">
     <%= form_with(model: @one_word, remote: true) do |f| %>
       <div class="form-group m-2">
-        <%= f.label :content, 'one_word_content' %>
+        <%= f.label :content, '文章' %>
         <%= f.text_area :content, autofocus: true, class: 'form-control' %>
       </div>
+
+      <div class="form-group images text-light">
+        <%= f.label :image, '画像' %>
+        <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png', class: 'form-control' %>
+      </div>
+
+      <% if OneWord.first.image.present? %>
+        <p class="text-light">現在登録されている画像（削除する場合はチェックしてください）</p>
+        <%= f.check_box :image_id, true, false %>
+        <%= image_tag OneWord.first.image, size:"100x100" %> <br>
+      <% end %>
+
       <div class="form-group m-2">
         <%= f.submit '設定する', class: 'btn btn-primary btn-block' %>
       </div>

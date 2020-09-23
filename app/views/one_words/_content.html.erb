@@ -1,1 +1,2 @@
   <p><%= simple_format(h(OneWord.first.content)) %></p>
+  <%= image_tag OneWord.first.image.variant(resize:'250x250').processed, class:"image" if OneWord.first.image.attached?  %>

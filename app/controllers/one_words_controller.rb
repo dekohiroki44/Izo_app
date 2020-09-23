@@ -21,6 +21,9 @@ class OneWordsController < ApplicationController
 
   def update
     @one_word = OneWord.first
+    if params[:one_word][:image_id]
+      OneWord.first.image.purge
+    end
     respond_to do |format|
       if @one_word.update_attributes(one_words_params)
         format.html { redirect_to root_path, notice: '設定しました' }
@@ -35,6 +38,6 @@ class OneWordsController < ApplicationController
   private
 
   def one_words_params
-    params.require(:one_word).permit(:content)
+    params.require(:one_word).permit(:content, :image)
   end
 end
