@@ -211,10 +211,20 @@ footer {
         }
       }
       .twitcas-cm {
-        background-color: #0075FF;
+        background: -moz-linear-gradient(top, #0075FF, #FFF);
+        background: -webkit-linear-gradient(top, #0075FF, #FFF);
+        background: linear-gradient(to bottom, #0075FF, #FFF);
       }
       .one-word {
-        background-color: wheat;
+        background: -moz-linear-gradient(top, #e078ff, #FFF);
+        background: -webkit-linear-gradient(top, #f84949, #FFF);
+        background: linear-gradient(to bottom, #bb1818, #FFF);
+        .one-word-title {
+          
+        }
+        .one-word-image {
+          width: 100%;
+        }
       }
     }
   }

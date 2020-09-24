@@ -1,28 +1,13 @@
 class OneWordsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
-
-  def new
-    @one_word = OneWord.new
-  end
-
-  def create
-    one_word = OneWord.new(one_words_params)
-    if one_word.save
-      flash[:success] = "更新しました"
-      redirect_to root_url
-    else
-      render :new
-    end
-  end
+  before_action :authenticate_user!
+  before_action :set_one_word
 
   def edit
-    @one_word = OneWord.first
   end
 
   def update
-    @one_word = OneWord.first
-    if params[:one_word][:image_id]
-      OneWord.first.image.purge
+    if params[:one_word][:image_id] == "1"
+      @one_word.image.purge
     end
     respond_to do |format|
       if @one_word.update_attributes(one_words_params)
@@ -36,6 +21,10 @@ class OneWordsController < ApplicationController
   end
 
   private
+  
+  def set_one_word
+    @one_word = OneWord.find(1)
+  end
 
   def one_words_params
     params.require(:one_word).permit(:content, :image)

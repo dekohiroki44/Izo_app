@@ -37,25 +37,19 @@
   </div>
   <div class="side col-md-3">
     <div class="sns-box">
-      <% if OneWord.first.present? %>
+      <% if @one_word.content.present? || @one_word.image.attached? %>
         <div class="one-word px-3 d-flex flex-column align-items-center">
           <div class="message my-3">
-            <p>一言ギター日記</p>
+            <p class="one-word-title">一言ギター日記</p>
             <div id="one_word_content">
               <%= render "one_words/content" %>
             </div>
           </div>
         </div>
-        <% if user_signed_in? %>
-          <%= link_to edit_one_word_path(OneWord.first), remote: true do %>
-            <i class="fas fa-wrench ml-1"></i>
-          <% end %>
-        <% end %>
-      <% else %>
-        <% if user_signed_in? %>
-          <%= link_to new_one_word_path, remote: true do %>
-            <i class="fas fa-wrench ml-1"></i>
-          <% end %>
+      <% end %>
+      <% if user_signed_in? %>
+        <%= link_to edit_one_word_path(@one_word), remote: true do %>
+          <i class="fas fa-wrench ml-1"></i>
         <% end %>
       <% end %>
     </div>
