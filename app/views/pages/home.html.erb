@@ -39,11 +39,9 @@
     <div class="sns-box">
       <% if @one_word.content.present? || @one_word.image.attached? %>
         <div class="one-word px-3 d-flex flex-column align-items-center">
-          <div class="message my-3">
-            <p class="one-word-title">一言ギター日記</p>
-            <div id="one_word_content">
-              <%= render "one_words/content" %>
-            </div>
+          <%= image_tag 'hitokotoguitarnikki.png', class: "one-word-title" %>
+          <div id="one_word_content">
+            <%= render "one_words/content" %>
           </div>
         </div>
       <% end %>
@@ -53,7 +51,7 @@
         <% end %>
       <% end %>
     </div>
-    <div class="sns-box mt-3">
+    <div class="sns-box mt-2">
       <%= link_to 'https://twitcasting.tv/Izo_ViS', target: :_blank do %>
         <div class="twitcas-cm px-3 d-flex flex-column align-items-center">
           <div class="message mt-3">
@@ -70,7 +68,7 @@
         <% end %>
       <% end %>
     </div>
-    <div class="sns-box mt-3">
+    <div class="sns-box mt-2">
       <a class="twitter-timeline" data-height="350" href="https://twitter.com/Izo_ViS?ref_src=twsrc%5Etfw">Tweets by Izo_ViS</a>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>

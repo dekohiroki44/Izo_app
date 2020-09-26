@@ -199,6 +199,9 @@ footer {
     margin-top: 38px;
     .sns-box {
       text-align: center;
+      p {
+        word-break: break-all;
+      }
       .twitcas-cm, .one-word {
         border: 5px double black;
         border-radius: 2%;
@@ -216,11 +219,13 @@ footer {
         background: linear-gradient(to bottom, #0075FF, #FFF);
       }
       .one-word {
-        background: -moz-linear-gradient(top, #e078ff, #FFF);
-        background: -webkit-linear-gradient(top, #f84949, #FFF);
-        background: linear-gradient(to bottom, #bb1818, #FFF);
+        background: -moz-linear-gradient(top, #bb1818, #FFF);
+        background: -webkit-linear-gradient(top, #bb1818, #FFF);
+        background: linear-gradient(to bottom, #bb1818, #ffb516);
         .one-word-title {
-          
+          margin-top: 10px;
+          width: 100%;
+          max-width: 300px;
         }
         .one-word-image {
           width: 100%;

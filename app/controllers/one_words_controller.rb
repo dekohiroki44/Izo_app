@@ -6,7 +6,7 @@ class OneWordsController < ApplicationController
   end
 
   def update
-    if params[:one_word][:image_id] == "1"
+    if params[:one_word][:image_delete] == "1"
       @one_word.image.purge
     end
     respond_to do |format|
@@ -21,7 +21,7 @@ class OneWordsController < ApplicationController
   end
 
   private
-  
+
   def set_one_word
     @one_word = OneWord.find(1)
   end

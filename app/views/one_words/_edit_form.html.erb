@@ -14,7 +14,7 @@
       <% if @one_word.image.attached? %>
         <div class="form-group m-2">
           現在登録されている画像（削除する場合はチェックしてください）
-          <%= f.check_box :image_id %>
+          <%= f.check_box :image_delete %>
           <%= image_tag @one_word.image, size:"100x100" %> <br>
         </div>
       <% end %>
