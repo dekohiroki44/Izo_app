@@ -199,8 +199,10 @@ footer {
     margin-top: 38px;
     .sns-box {
       text-align: center;
-      .twitcas-cm {
-        background-color: #0075FF;
+      p {
+        word-break: break-all;
+      }
+      .twitcas-cm, .one-word {
         border: 5px double black;
         border-radius: 2%;
         p {
@@ -209,6 +211,24 @@ footer {
         }
         .izo-chara {
           width: 50%;
+        }
+      }
+      .twitcas-cm {
+        background: -moz-linear-gradient(top, #0075FF, #FFF);
+        background: -webkit-linear-gradient(top, #0075FF, #FFF);
+        background: linear-gradient(to bottom, #0075FF, #FFF);
+      }
+      .one-word {
+        background: -moz-linear-gradient(top, #bb1818, #FFF);
+        background: -webkit-linear-gradient(top, #bb1818, #FFF);
+        background: linear-gradient(to bottom, #bb1818, #ffb516);
+        .one-word-title {
+          margin-top: 10px;
+          width: 100%;
+          max-width: 300px;
+        }
+        .one-word-image {
+          width: 100%;
         }
       }
     }

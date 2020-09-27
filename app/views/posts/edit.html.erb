@@ -28,10 +28,12 @@
     <%= f.file_field :images, accept: 'image/jpeg,image/gif,image/png', class: 'form-control' %>
   </div>
 
-  <p class="text-light">現在登録されている画像（削除するものはチェックしてください）</p>
-  <% @post.images.each do |image| %>
-    <%= f.check_box :image_ids, {multiple: true}, image.id, false %>
-    <%= image_tag image, size:"100x100" %> <br>
+  <% if @post.images.present? %>
+    <p class="text-light">現在登録されている画像（削除するものはチェックしてください）</p>
+    <% @post.images.each do |image| %>
+      <%= f.check_box :image_ids, {multiple: true}, image.id, false %>
+      <%= image_tag image, size:"100x100" %> <br>
+    <% end %>
   <% end %>
 
   <div class="form-group text-light">

@@ -10,6 +10,12 @@ class PagesController < ApplicationController
     end
     @posts = Post.first(2)
     @live = Live.find_by('date >= ?', Date.today)
+    if OneWord.exists?(1)
+      @one_word = OneWord.find(1) 
+    else
+      OneWord.create(id: 1)
+      @one_word = OneWord.find(1) 
+    end
   end
 
   def discography

@@ -1,0 +1,6 @@
+  <p><%= simple_format(h(@one_word.content)) %></p>
+  <% if @one_word.image.attached? %>
+    <%= link_to @one_word.image, 'data-lightbox': @one_word.image do %>
+      <%= image_tag @one_word.image, class:"one-word-image my-2" %>
+    <% end %>
+  <% end %>

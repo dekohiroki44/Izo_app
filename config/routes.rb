@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :lives
   resources :posts
   resources :contacts, only: [:new, :create]
+  resources :one_words, only: [:edit, :update]
 end

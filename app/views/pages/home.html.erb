@@ -37,6 +37,21 @@
   </div>
   <div class="side col-md-3">
     <div class="sns-box">
+      <% if @one_word.content.present? || @one_word.image.attached? %>
+        <div class="one-word px-3 d-flex flex-column align-items-center">
+          <%= image_tag 'hitokotoguitarnikki.png', class: "one-word-title" %>
+          <div id="one_word_content">
+            <%= render "one_words/content" %>
+          </div>
+        </div>
+      <% end %>
+      <% if user_signed_in? %>
+        <%= link_to edit_one_word_path(@one_word), remote: true do %>
+          <i class="fas fa-wrench ml-1"></i>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="sns-box mt-2">
       <%= link_to 'https://twitcasting.tv/Izo_ViS', target: :_blank do %>
         <div class="twitcas-cm px-3 d-flex flex-column align-items-center">
           <div class="message mt-3">
@@ -53,8 +68,8 @@
         <% end %>
       <% end %>
     </div>
-    <div class="sns-box mt-5">
-      <a class="twitter-timeline" data-height="450" href="https://twitter.com/Izo_ViS?ref_src=twsrc%5Etfw">Tweets by Izo_ViS</a>
+    <div class="sns-box mt-2">
+      <a class="twitter-timeline" data-height="350" href="https://twitter.com/Izo_ViS?ref_src=twsrc%5Etfw">Tweets by Izo_ViS</a>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   </div>
@@ -77,4 +92,5 @@
   <% end %>
 </div>
 
+<div class="modal fade" id="one-word-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
 <div class="modal fade" id="twitcasting-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
