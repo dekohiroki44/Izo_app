@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :posts
   resources :contacts, only: [:new, :create]
   resources :one_words, only: [:edit, :update]
+  resources :announcements, only: [:edit, :update]
 end
