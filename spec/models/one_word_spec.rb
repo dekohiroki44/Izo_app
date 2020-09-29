@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe OneWord, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let!(:one_word) { build(:one_word) }
+
+  it 'is valid with no imput' do
+    expect(one_word).to be_valid
+  end
 end

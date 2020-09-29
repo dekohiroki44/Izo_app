@@ -1,5 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Announcement, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let!(:announcement) { build(:announcement) }
+
+  it 'is valid with no imput' do
+    expect(announcement).to be_valid
+  end
 end
