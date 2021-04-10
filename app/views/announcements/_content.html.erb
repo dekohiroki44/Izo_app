@@ -1,5 +1,5 @@
-<% if user.twitcasting_announcement.present? %> 
-  <p><%= simple_format(h(user.twitcasting_announcement)) %></p>
+<% if @announcement.content.present? %> 
+  <p><%= simple_format(h(@announcement.content)) %></p>
 <% else %>
   <p>ツイキャスライブ</p>
   <p>不定期配信中</p>

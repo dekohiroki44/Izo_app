@@ -40,7 +40,7 @@
       <% if @one_word.content.present? || @one_word.image.attached? %>
         <div class="one-word px-3 d-flex flex-column align-items-center">
           <%= image_tag 'hitokotoguitarnikki.png', class: "one-word-title" %>
-          <div id="one_word_content">
+          <div id="one-word-content">
             <%= render "one_words/content" %>
           </div>
         </div>
@@ -53,17 +53,17 @@
     </div>
     <div class="sns-box mt-2">
       <%= link_to 'https://twitcasting.tv/Izo_ViS', target: :_blank do %>
-        <div class="twitcas-cm px-3 d-flex flex-column align-items-center">
+        <div class="announce px-3 d-flex flex-column align-items-center">
           <div class="message mt-3">
-            <div id="twitcasting_content">
-              <%= render "users/twitcasting_content", user: @user %>
+            <div id="announcement-content">
+              <%= render "announcements/content" %>
             </div>
           </div>
           <%= image_tag 'izo_chara.png', class: 'izo-chara' %>
         </div>
       <% end %>
       <% if user_signed_in? %>
-        <%= link_to edit_user_path(@user), remote: true do %>
+        <%= link_to edit_announcement_path(@announcement), remote: true do %>
           <i class="fas fa-wrench ml-1"></i>
         <% end %>
       <% end %>
@@ -93,4 +93,4 @@
 </div>
 
 <div class="modal fade" id="one-word-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
-<div class="modal fade" id="twitcasting-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>
+<div class="modal fade" id="announcement-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"></div>

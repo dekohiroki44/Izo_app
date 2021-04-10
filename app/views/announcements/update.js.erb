@@ -1,0 +1,6 @@
+<% if @status == 'success' %>
+$("#announcement-content").html("<%= j(render("content")) %>");
+<%  elsif @status == 'fail' %>
+alert('error!');
+<% end %>
+$("#announcement-modal").modal("hide");
