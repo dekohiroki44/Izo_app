@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
     @posts = Post.first(2)
-    @live = Live.find_by('date >= ?', Date.today)
+    @live = Live.where('date >= ?', Date.today).last
 
     if OneWord.exists?(1)
       @one_word = OneWord.find(1)
