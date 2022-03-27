@@ -10,7 +10,9 @@
       <li class="nav-item active"><%= link_to 'Live', lives_path, class: 'nav-link' %></li>
       <li class="nav-item active"><%= link_to 'Discography', discography_path, class: 'nav-link' %></li>
       <li class="nav-item active"><%= link_to "Profile", profile_path, class: 'nav-link' %></li>
-      <li class="nav-item active"><%= link_to "Contact", new_contact_path, class: 'nav-link' %></li>
+      <!-- <li class="nav-item active"><%= link_to "Contact", new_contact_path, class: 'nav-link' %></li> -->
+      <li class="nav-item active"><%= link_to "Contact", 'https://ssl.form-mailer.jp/fms/f43738e9739174', target: :_blank, class: 'nav-link' %></li>
+
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Edit</a>
